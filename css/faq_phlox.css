@@ -1,0 +1,49 @@
+/* Faq */
+
+div.qa {
+	font-size: 20px;
+	margin: 20px auto;
+	padding: 10px;
+	background-color: #f1f1f1;
+	border: 1px solid #dddddd;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	max-width: 1024px;
+}
+
+div.qa:hover {
+	background-color: #dddddd;
+}
+
+div.answer_qa {
+	display: none;
+}
+
+div.answer_qa p {
+	font-size: 18px;
+	text-align: justify;
+	margin: 0px auto 30px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	max-width: 1024px;
+}
+
+/* Contact */
+
+#contact h2 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 36px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#contact h3 {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	color: #262527;
+	margin-bottom: 25px;
+}

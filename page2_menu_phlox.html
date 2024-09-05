@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phlox Nutrition Website</title>
+
+	<link rel="stylesheet" href="./css/common_phlox.css">
+	<link rel="stylesheet" href="./css/form_phlox.css">
+	<link rel="stylesheet" href="./css/menu_phlox.css">
+</head>
+
+<body>
+	<header>
+		<img src="./images/logo.png" alt="Logo" width="80px">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="page2_menu_phlox.html">Menu Recommendation</a></li>
+				<li><a href="page3_faq_phlox.html">FAQ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<img src="./images/banner-menu.jpeg" width="100%">
+	<main>
+		<section id="bmiCal">
+			<h2>BMI and Calories Calculation</h2>
+			<form id="bmi_info">
+				<label for="height">Height (cm):</label>
+				<input type="number" id="height" name="height" required>
+
+				<label for="weight">Weight (kg):</label>
+				<input type="number" id="weight" name="weight" required>
+
+				<label for="gender">Gender:</label>
+				<select name="gender" id="gender">
+					<option value="" selected="true" disabled="disabled">Choose your gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+
+				<label for="age">Age Group:</label>
+				<select name="age" id="age">
+					<option value="" selected="true" disabled="disabled">Choose your age</option>
+					<option value="child">From 2 to 25 years old</option>
+					<option value="adult">From 26 to 49 years old </option>
+					<option value="elder">From 50 years old</option>
+				</select>
+
+				<label for="life">Lifestyle:</label>
+				<select name="life" id="life">
+					<option value="" selected="true" disabled="disabled">Choose your life style</option>
+					<option value="seden">Sedentary</option>
+					<option value="active">Active</option>
+				</select>
+				<input type="button" value="Calculate" onclick="bmiCalculation()">
+			</form>
+			<br>
+			<h4 id="tooltipLabel"> >> Click here to see how to calculate BMI << </h4>
+					<div class="tooltip" id="tooltip">
+						<p>
+							Body Mass Index is a simple calculation using a person’s height and weight. <br>
+							The formula is BMI = kg/m2 where kg is a person’s weight in kilograms and m2
+							is their height in metres squared.
+						</p>
+						<h3>BMI Categories: </h3>
+						<ul>
+							<li>Underweight: less than 18.5</li>
+							<li>Healthy: 18.5–24.9</li>
+							<li>Overweight: 25–29.9</li>
+							<li>Obesity: 30 or greater</li>
+						</ul>
+						<h3>Who shouldn't use a BMI calculator?</h3>
+						<p>BMI is not used for muscle builders, long distance athletes,
+							pregnant women, the elderly or young children.
+						</p>
+					</div>
+		</section>
+
+		<section>
+			<div id="bmi" style="display: none"></div>
+		</section>
+
+		<section>
+			<div id="menu" style="display: none">
+				<div id="underweight" style="display: none">
+					<h2>Nutrition Menu Recommendation</h2>
+					<h3>Underweight</h3>
+					<br>
+					<p>Based on your BMI, you are underweight. We recommend the following nutrition menu:</p>
+					<br>
+					<ol>
+						<li>Eating at least 5 portions of a variety of fruit and vegetables every day.</li>
+						<li>Basing meals on potatoes, bread, rice, pasta or other starchy carbohydrates.
+							Choose wholegrain where possible.</li>
+						<li>Having some dairy or dairy alternatives (such as soya drinks and yoghurts). Have whole
+							(full-fat) milk until you build your weight back up.</li>
+						<li>Eating some beans, pulses, fish, eggs, meat and other protein.</li>
+						<li>Choosing unsaturated oils and spreads, such as sunflower or rapeseed, and eating them
+							in small amounts.</li>
+						<li>Drinking plenty of fluids. But try not to have drinks just before meals to avoid
+							feeling too full to eat.</li>
+					</ol>
+					<br>
+					<div class="menu-images">
+						<img src="./images/menu-dairy.jpg" width="180" height="180">
+						<img src="./images/menu-fruitvegie.jpg" width="180" height="180">
+						<img src="./images/menu-fluid.jpg" width="180" height="180">
+						<img src="./images/menu-protein.jpg" width="180" height="180">
+					</div>
+				</div>
+				<div id="healthy" style="display: none">
+					<h2>Nutrition Menu Recommendation</h2>
+					<h3>Healthy Weight</h3>
+					<br>
+					<p>Based on your BMI, your weight is healthy. We recommend the following nutrition menu:</p>
+					<br>
+					<ol>
+						<li>Emphasizes fruits, vegetables, whole grains, and fat-free or low-fat milk and milk
+							products.</li>
+						<li>Includes a variety of protein foods such as seafood, lean meats and poultry, eggs,
+							legumes (beans and peas), soy products, nuts, and seeds.</li>
+						<li>Limit food with high sugars, sodium, saturated fats, trans fats, and cholesterol.</li>
+						<li>Stays within your daily calorie needs.</li>
+					</ol>
+					<br>
+					<div class="menu-images">
+						<img src="./images/menu-dairy2.jpg" width="180" height="180">
+						<img src="./images/menu-fruitvegie2.jpg" width="180" height="180">
+						<img src="./images/menu-fluid2.jpg" width="180" height="180">
+						<img src="./images/menu-protein2.jpg" width="180" height="180">
+					</div>
+				</div>
+				<div id="overweight" style="display: none">
+					<h2>Nutrition Menu Recommendation</h2>
+					<h3>Overweight</h3>
+					<br>
+					<p>Based on your BMI, you are overweight. We recommend the following nutrition menu:</p>
+					<br>
+					<ol>
+						<li>Follow low-fat, plant-based diets:Emphasizes fruits, vegetables, whole grains, and
+							fat-free or low-fat milk and milk products.</li>
+						<li>Protein-rich foods, such as lean meats, eggs, and legumes.</li>
+						<li>Reduce dietary fat. Common sources of fat are meats, dairy products, fried foods, and
+							added oils.</li>
+						<li>Healthy fats, such as avocado, nuts, and seeds.</li>
+						<li>Choose foods high in complex carbohydrates and fiber: whole grains like quinoa and
+							brown rice, legumes like peas, edamame, lentils, peanuts, chickpeas... </li>
+						<li>Minimize sugars and processed food.</li>
+					</ol>
+					<br>
+					<div class="menu-images">
+						<img src="./images/menu-dairy3.jpg" width="180" height="180">
+						<img src="./images/menu-fruitvegie3.jpg" width="180" height="180">
+						<img src="./images/menu-protein3.jpg" width="180" height="180">
+						<img src="./images/menu-fluid3.jpg" width="180" height="180">
+					</div>
+				</div>
+				<div id="obese" style="display: none">
+					<h2>Nutrition Menu Recommendation</h2>
+					<h3>Obese</h3>
+					<br>
+					<p>Based on your BMI, you are obese. We recommend the following nutrition menu:</p>
+					<br>
+					<ol>
+						<li>Calorie restriction to achieve a state of negative energy balance. </li>
+						<li>Follow a dietary pattern with associated health benefits (E.g. Portfolio or
+							Mediterranean dietery patterns).</li>
+						<li>Limit the intake of liquid calories.</li>
+						<li>Reduce portion sizes at meals and snacks.</li>
+						<li>Increase vegetables and fruit throughout the day.</li>
+						<li>Modify carbohydrate or fat intake.</li>
+						<li>Eat enough protein and fibre at meals to promote satiety after eating.</li>
+					</ol>
+					<br>
+					<div class="menu-images">
+						<img src="./images/menu-dairy.jpg" width="180" height="180">
+						<img src="./images/menu-fruitvegie2.jpg" width="180" height="180">
+						<img src="./images/menu-fluid.jpg" width="180" height="180">
+						<img src="./images/menu-protein3.jpg" width="180" height="180">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Long. All rights reserved.</p>
+	</footer>
+
+	<script src="./script/menu_phlox.js"></script>
+	<script src="./script/top_button_phlox.js"></script>
+</body>
+
+</html>

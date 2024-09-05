@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phlox Nutrition Website</title>
+
+	<link rel="stylesheet" href="./css/common_phlox.css">
+	<link rel="stylesheet" href="./css/form_phlox.css">
+	<link rel="stylesheet" href="./css/faq_phlox.css">
+
+	<script src="./script/faq_phlox.js"></script>
+</head>
+
+<body>
+	<header>
+		<img src="./images/logo.png" alt="Logo" width="80px">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="page2_menu_phlox.html">Menu Recommendation</a></li>
+				<li><a href="page3_faq_phlox.html">FAQ</a></li>
+			</ul>
+		</nav>
+	</header>
+	<img src="./images/banner-faq.jpg" width="100%">
+	<main>
+		<section id="contact">
+			<h2>Nutrition Q&A</h2>
+			<div class="qa" onclick="toggleList('qa1')">1. If weight loss (and maintenance) really comes down to the
+				matter of calories in versus calories out, can I reach my goal by staying under a certain amount of
+				calories per day?</div>
+			<div id="answer_qa1" class="answer_qa">
+				<p>True, the most important factor for weight loss is burning more calories than you eat. But to
+					ensure you're burning off body fat and not muscle—and to build muscle while burning body
+					fat—your macronutrient intake becomes critical.
+					<br><br> Since muscle is composed of protein, it makes sense that you need ample amounts of
+					protein. So when trying to drop body fat, you don't want to lower protein intake.
+					<br><br> We now know that eating fat does not lead to fat gain, especially when you eat the
+					right
+					kinds—namely, essential fats like the omega-3 and monounstaurated fats. In fact, these fats
+					actually encourage fat loss.
+					<br><br> Unlike protein and fat, which are essential, there are no essential carbs. That's
+					because
+					your body can convert protein and fat into carbs. So to lose fat you should start by reducing
+					carb intake.
+					<br><br>This method also helps to keep insulin levels low and steady, which allows for greater
+					fat
+					burning and less fat gain.
+				</p>
+			</div>
+
+			<div class="qa" onclick="toggleList('qa2')">2. What combination of macronutrients should a healthy,
+				active
+				woman shoot for on a daily basis?</div>
+			<div id="answer_qa2" class="answer_qa">
+				<p>Typically we suggest about 1 to 1.5 g of protein, about 1 g of carbs or less, and about 0.25 to
+					0.5 g of fat per pound of bodyweight.
+					<br><br> That comes out to about 11-15 calories per pound of bodyweight.
+				</p>
+			</div>
+
+			<div class="qa" onclick="toggleList('qa3')">3. Aside from protein, carbs and fat, what should I be
+				looking
+				at on nutrition labels as far as what to eat and what to avoid?</div>
+			<div id="answer_qa3" class="answer_qa">
+				<p>Most of the food you eat should be fresh, unpackaged food that doesn't necessarily have a
+					nutrition label on it—fish, chicken, steak, eggs, veggies and fruit.
+					<br><br> This, along with your supplements, is where your micronutrients, such as vitamins and
+					minerals, will be coming from.
+					<br><br>With packaged foods, focus on the major macros. Fiber is part of the carb macro, so the
+					more fiber the better. And check that the sugar content is less than half the total carbs.
+					<br><br> Also be sure that there are zero trans fats, as well as nothing as hydrogenated or
+					partially hydrogentated—code words for trans fats.
+				</p>
+			</div>
+
+			<div class="qa" onclick="toggleList('qa4')">4. What are the pros and cons of low-carb diets? </div>
+			<div id="answer_qa4" class="answer_qa">
+				<p>A lot of people complain they have no energy when eating low carb and have difficulty working
+					out.
+					<br><br> This is true during the first couple of weeks of being on a low-carb diet. That's
+					because in those who have been eating higher carbs, their bodies have adapted to burning carbs
+					as a primary fuel source.
+					<br><br>When those ample carbs are suddenly gone, the body first struggles to burn adequate
+					amounts of fat for fuel. However, after a few weeks of sticking with a low-carb diet, the body
+					adapts by increasing the enzymes involved in burning fat, and becomes more efficient at burning
+					fat for fuel.
+				</p>
+			</div>
+
+			<div class="qa" onclick="toggleList('qa5')">5. If weight loss is predominantly about calories in versus
+				calories out, isn't it better to skip meals if I’m not hungry? </div>
+			<div id="answer_qa5" class="answer_qa">
+				<p>Not really, as that can put your body in starvation mode, which slows your metabolism down and
+					causes you to store more fat when you do eat.
+				</p>
+			</div>
+
+			<br>
+			<iframe name="hiddenFrame" style="display:none"></iframe>
+
+			<h2>Contact Us</h2>
+			<h3>Question not answered yet? We are here to help!</h3>
+			<form onsubmit="alert('We have received your inquiry and will get back to you soon!');" method="post"
+				target="hiddenFrame">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="phone">Phone:</label>
+				<input type="tel" id="phone" name="phone">
+
+				<label for="reason">Reason for Contact:</label>
+				<select id="reason" name="reason" required>
+					<option value="" disabled selected>Select a reason</option>
+					<option value="General Inquiry">General Inquiry</option>
+					<option value="Product Support">BMI Calculation Inquiry</option>
+					<option value="Sales Inquiry">Menu Inquiry</option>
+					<option value="Other">Others</option>
+				</select>
+
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+
+				<input type="submit" value="Send">
+			</form>
+		</section>
+
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Long. All rights reserved.</p>
+	</footer>
+
+	<script src="./script/top_button_phlox.js"></script>
+</body>
+
+</html>

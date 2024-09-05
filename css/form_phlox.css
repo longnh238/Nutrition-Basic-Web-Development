@@ -1,0 +1,70 @@
+/* Form */
+
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f1f1f1;
+}
+
+form label {
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+/* Form BMI */
+
+form input[type="number"] {
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #ffffff;
+}
+
+form input[type="button"] {
+	background-color: #333333;
+	color: #ffffff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Form Contact */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #ffffff;
+}
+
+form textarea {
+	resize: vertical;
+	min-height: 150px;
+}
+
+form input[type="submit"] {
+	background-color: #333333;
+	color: #ffffff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+	background-color: #3e8e41;
+}
